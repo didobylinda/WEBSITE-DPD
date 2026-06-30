@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+C:\Users\Usuario\Desktop\GitHub\Laboratorios\Game tic tac toe\.metadata\.plugins\org.eclipse.jdt.core
-2279576935.index
-1865797976.index
-780116478.index
