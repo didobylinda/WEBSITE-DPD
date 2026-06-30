@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Proyectos | Innovación Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+    <div class="video-background-container">
+        <video autoplay loop muted playsinline class="video-bg">
+            <source src="videos/herogaleria.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    <!-- 1. HERO SECTION -->
+    <header class="hero-galeria">
+        <img src="img/ssss.png" alt="Logo de la Carrera" class="logo-hero-galeria">
+        <h1>Galeria de <br><span>Proyectos</span></h1>
+        <p>Explora el archivo oficial de proyectos tecnológicos, sistemas interactivos y desarrollos multimedia diseñados por los estudiantes de la carrera.</p>
+    </header>
+
+    <!-- 2. PANEL DE FILTROS -->
+    <nav class="seccion-filtros">
+        <button class="btn-filtro activo" data-categoria="todos">Todos</button>
+        <button class="btn-filtro" data-categoria="web">Web & Apps</button>
+        <button class="btn-filtro" data-categoria="videojuegos">Videojuegos</button>
+        <button class="btn-filtro" data-categoria="audiovisual">Animación & Multimedia</button>
+        <button class="btn-filtro" data-categoria="branding">Diseño & Branding</button>
+    </nav>
+
+    <!-- 3. GRILLA DE TARJETAS (SHOWCASE) -->
+    <main class="contenedor-galeria" id="grilla-proyectos">
+        
+        <!-- Tarjeta 1 (Web) -->
+        <article class="tarjeta-proyecto" data-categoria="web" onclick="abrirModal('Cake Heaven', 'Linda Romano', 'Sitio web interactivo y completamente responsivo desarrollado desde cero con HTML estructurado, estilos avanzados en CSS y lógica dinámica en JavaScript nativo para optimizar la experiencia de usuario.', ['img/cakeheaven.png', 'img/cakeheaven2.png', 'img/cakeheaven3.png'])">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Web & Apps</span>
+                <img src="img/cakeheaven.png" alt="cakeheaven WEB">
+            </div>
+            <div class="proyecto-info">
+                <h3>Cake Heaven</h3>
+                <p>Sitio web interactivo y completamente responsivo desarrollado desde cero con HTML estructurado, estilos avanzados en CSS y lógica dinámica en JavaScript nativo para optimizar la experiencia de usuario.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span> <span class="tag">JavaScript</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-categoria="web" onclick="abrirModal('Studio GHIBLI', 'Nayla Cuevas', 'Sitio web interactivo y completamente responsivo desarrollado desde cero con HTML estructurado, estilos avanzados en CSS y lógica dinámica en JavaScript nativo para optimizar la experiencia de usuario.', ['img/estudioghibliuno.jpg', 'img/estudioghibli.jpg', 'img/estudioghiblidos.jpg'])">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Web & Apps</span>
+                <img src="img/estudioghibliuno.jpg" alt="STUDIO GHIBLI WEB">
+            </div>
+            <div class="proyecto-info">
+                <h3>Studio GHIBLI</h3>
+                <p>Sitio web interactivo y completamente responsivo desarrollado desde cero con HTML estructurado, estilos avanzados en CSS y lógica dinámica en JavaScript nativo para optimizar la experiencia de usuario.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span> <span class="tag">JavaScript</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-categoria="web" onclick="abrirModal('CALI', 'Jhojan Cuiza', 'Sitio web interactivo y completamente responsivo desarrollado desde cero con HTML estructurado, estilos avanzados en CSS y lógica dinámica en JavaScript nativo para optimizar la experiencia de usuario.', ['img/CALI.jpg', 'img/CALI2.jpg', 'img/CALI3.jpg'])">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Web & Apps</span>
+                <img src="img/CALI.jpg" alt="CALIWEB">
+            </div>
+            <div class="proyecto-info">
+                <h3>CALI</h3>
+                <p>Sitio web interactivo y completamente responsivo desarrollado desde cero con HTML estructurado, estilos avanzados en CSS y lógica dinámica en JavaScript nativo para optimizar la experiencia de usuario.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span> <span class="tag">JavaScript</span>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- Tarjeta 2 (Videojuegos) -->
+        <article class="tarjeta-proyecto" data-categoria="videojuegos" onclick="abrirModal('VIDEOJUEGOS', 'Estudiantes de 6to Semestre', 'Simulador interactivo implementado en C++ usando librerías nativas de OpenGL para renderizar estructuras geométricas tridimensionales fractales de forma óptima.', 'https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&w=800&q=80')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Videojuegos</span>
+                <img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&w=800&q=80" alt="Proyecto Videojuegos">
+            </div>
+            <div class="proyecto-info">
+                <h3>VIDEOJUEGOS</h3>
+                <p>Simulador interactivo en C++ y OpenGL para renderizar estructuras geométricas de forma óptima usando vértices.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">OpenGL</span>
+                    <span class="tag">Gráficos</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-categoria="videojuegos" onclick="abrirModal('VIDEOJUEGOS', 'Estudiantes de 6to Semestre', 'Simulador interactivo implementado en C++ usando librerías nativas de OpenGL para renderizar estructuras geométricas tridimensionales fractales de forma óptima.', 'https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&w=800&q=80')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Videojuegos</span>
+                <img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&w=800&q=80" alt="Proyecto Videojuegos">
+            </div>
+            <div class="proyecto-info">
+                <h3>VIDEOJUEGOS</h3>
+                <p>Simulador interactivo en C++ y OpenGL para renderizar estructuras geométricas de forma óptima usando vértices.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">OpenGL</span>
+                    <span class="tag">Gráficos</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-categoria="videojuegos" onclick="abrirModal('VIDEOJUEGOS', 'Estudiantes de 6to Semestre', 'Simulador interactivo implementado en C++ usando librerías nativas de OpenGL para renderizar estructuras geométricas tridimensionales fractales de forma óptima.', 'https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&w=800&q=80')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Videojuegos</span>
+                <img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&w=800&q=80" alt="Proyecto Videojuegos">
+            </div>
+            <div class="proyecto-info">
+                <h3>VIDEOJUEGOS</h3>
+                <p>Simulador interactivo en C++ y OpenGL para renderizar estructuras geométricas de forma óptima usando vértices.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">OpenGL</span>
+                    <span class="tag">Gráficos</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Tarjeta 3 (Animación o Multimedia) -->
+        <article class="tarjeta-proyecto" data-categoria="audiovisual" onclick="abrirModal('Fotomontaje', 'Estudiantes de 3er Semestre', 'Fotomontaje avanzado mediante la integración de múltiples activos visuales, aplicando técnicas profesionales de recorte, corrección de color e iluminación para crear una atmósfera inmersiva.', 'img/FINAL.png')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Animación & Multimedia</span>
+                <img src="img/FINAL.png" alt="Proyecto Multimedia">
+            </div>
+            <div class="proyecto-info">
+                <h3>Composición Digital</h3>
+                <p>Fotomontaje avanzado mediante la integración de múltiples activos visuales, aplicando técnicas profesionales de recorte, corrección de color e iluminación para crear una atmósfera inmersiva.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">Photoshop</span>
+                    <span class="tag">Fotomontaje</span>
+                    <span class="tag">Medios Multimedia</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-categoria="audiovisual" onclick="abrirModal('Fotomontaje', 'Estudiantes de 3er Semestre', 'Fotomontaje avanzado mediante la integración de múltiples activos visuales, aplicando técnicas profesionales de recorte, corrección de color e iluminación para crear una atmósfera inmersiva.', 'img/Foto_Montaje_Azul.png')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Animación & Multimedia</span>
+                <img src="img/Foto_Montaje_Azul.png" alt="Proyecto Multimedia">
+            </div>
+            <div class="proyecto-info">
+                <h3>Composición Digital</h3>
+                <p>Fotomontaje avanzado mediante la integración de múltiples activos visuales, aplicando técnicas profesionales de recorte, corrección de color e iluminación para crear una atmósfera inmersiva.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">Photoshop</span>
+                    <span class="tag">Fotomontaje</span>
+                    <span class="tag">Medios Multimedia</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-categoria="audiovisual" onclick="abrirModal('Fotomontaje', 'Estudiantes de 3er Semestre', 'Fotomontaje avanzado mediante la integración de múltiples activos visuales, aplicando técnicas profesionales de recorte, corrección de color e iluminación para crear una atmósfera inmersiva.', 'img/Fotomontaje de Sequeiros Porco Leydy Daniela.png')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Animación & Multimedia</span>
+                <img src="img/Fotomontaje de Sequeiros Porco Leydy Daniela.png" alt="Proyecto Multimedia">
+            </div>
+            <div class="proyecto-info">
+                <h3>Composición Digital</h3>
+                <p>Fotomontaje avanzado mediante la integración de múltiples activos visuales, aplicando técnicas profesionales de recorte, corrección de color e iluminación para crear una atmósfera inmersiva.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">Photoshop</span>
+                    <span class="tag">Fotomontaje</span>
+                    <span class="tag">Medios Multimedia</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-categoria="audiovisual" onclick="abrirModal('Fotomontaje', 'Estudiantes de 3er Semestre', 'Fotomontaje avanzado mediante la integración de múltiples activos visuales, aplicando técnicas profesionales de recorte, corrección de color e iluminación para crear una atmósfera inmersiva.', 'img/Fotografia.jpg')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Animación & Multimedia</span>
+                <img src="img/Fotografia.jpg" alt="Proyecto Multimedia">
+            </div>
+            <div class="proyecto-info">
+                <h3>Composición Digital</h3>
+                <p>Fotomontaje avanzado mediante la integración de múltiples activos visuales, aplicando técnicas profesionales de recorte, corrección de color e iluminación para crear una atmósfera inmersiva.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">Photoshop</span>
+                    <span class="tag">Fotomontaje</span>
+                    <span class="tag">Medios Multimedia</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-categoria="audiovisual" onclick="abrirModal('La Rutina del Abuelo', 'Equipo de Animación', 'Cortometraje conceptual animado en formato 2D tradicional utilizando OpenToonz. Integra configuraciones avanzadas de FFMPEG para exportación de video fluida.', 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Animación & Multimedia</span>
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Proyecto Animación">
+            </div>
+            <div class="proyecto-info">
+                <h3>La Rutina del Abuelo</h3>
+                <p>Cortometraje conceptual animado en 2D utilizando OpenToonz con flujos de exportación FFMPEG.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">OpenToonz</span>
+                    <span class="tag">2D Animation</span>
+                    <span class="tag">FFMPEG</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Tarjeta 4 ( diseño o Branding) -->
+        <article class="tarjeta-proyecto" data-categoria="branding" onclick="abrirModal('Expresión Digital', 'Soraya Alexandra Bernal Quisbert', 'Ilustración digital que demuestra el manejo avanzado de la composición visual, la teoría del color y la creatividad conceptual para dar vida a personajes y escenarios únicos.', 'img/Soraya Alexandra Bernal Quisbert .jpg')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Diseño & Branding</span>
+                <img src="img/Soraya Alexandra Bernal Quisbert .jpg" alt="Expresión Digital">
+            </div>
+            <div class="proyecto-info">
+                <h3>Expresión Digital</h3>
+                <p>Ilustración digital que demuestra el manejo avanzado de la composición visual, la teoría del color y la creatividad conceptual para dar vida a personajes y escenarios únicos.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">Ilustracion</span>
+                    <span class="tag">Concept Art</span>
+                    <span class="tag">Color</span>
+                </div>
+            </div>
+        </article>
+
+         <article class="tarjeta-proyecto" data-categoria="branding" onclick="abrirModal('Expresión Digital', 'Alison Nicol Miranda', 'Ilustración digital que demuestra el manejo avanzado de la composición visual, la teoría del color y la creatividad conceptual para dar vida a personajes y escenarios únicos.', 'img/AlisonNicolMiranda.jpg')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Diseño & Branding</span>
+                <img src="img/AlisonNicolMiranda.jpg" alt="Expresión Digital">
+            </div>
+            <div class="proyecto-info">
+                <h3>Expresión Digital</h3>
+                <p>Ilustración digital que demuestra el manejo avanzado de la composición visual, la teoría del color y la creatividad conceptual para dar vida a personajes y escenarios únicos.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">Ilustracion</span>
+                    <span class="tag">Concept Art</span>
+                    <span class="tag">Color</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-categoria="branding" onclick="abrirModal('Expresión Digital', 'Kattya Belen Condori Caba ', 'Ilustración digital que demuestra el manejo avanzado de la composición visual, la teoría del color y la creatividad conceptual para dar vida a personajes y escenarios únicos.', 'img/Kattya Belen Condori Caba .jpeg')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Diseño & Branding</span>
+                <img src="img/Kattya Belen Condori Caba .jpeg" alt="Expresión Digital">
+            </div>
+            <div class="proyecto-info">
+                <h3>Expresión Digital</h3>
+                <p>Ilustración digital que demuestra el manejo avanzado de la composición visual, la teoría del color y la creatividad conceptual para dar vida a personajes y escenarios únicos.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">Ilustracion</span>
+                    <span class="tag">Concept Art</span>
+                    <span class="tag">Color</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto" data-categoria="branding" onclick="abrirModal('Expresión Digital', 'Rodrigo Jancko Oros ', 'Ilustración digital que demuestra el manejo avanzado de la composición visual, la teoría del color y la creatividad conceptual para dar vida a personajes y escenarios únicos.', 'img/Rodrigo Jancko Oros .jpg')">
+            <div class="proyecto-imagen">
+                <span class="categoria-badge">Diseño & Branding</span>
+                <img src="img/Rodrigo Jancko Oros .jpg" alt="Expresión Digital">
+            </div>
+            <div class="proyecto-info">
+                <h3>Expresión Digital</h3>
+                <p>Ilustración digital que demuestra el manejo avanzado de la composición visual, la teoría del color y la creatividad conceptual para dar vida a personajes y escenarios únicos.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">Ilustracion</span>
+                    <span class="tag">Concept Art</span>
+                    <span class="tag">Color</span>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- 4. VENTANA MODAL (VISTA DETALLADA FLOTANTE) -->
+    <div class="modal" id="modal-proyecto" onclick="cerrarModalExterno(event)">
+        <div class="modal-contenido">
+            <button class="btn-cerrar" onclick="cerrarModal()">&times;</button>
+            <div class="modal-imagen">
+                <button class="flecha-carrusel prev" onclick="cambiarImagen(-1)">&#10094;</button>
+    
+                <img id="modalImgAsset" src="" alt="Vista del proyecto">
+    
+                <button class="flecha-carrusel next" onclick="cambiarImagen(1)">&#10095;</button>
+            </div>
+            <div class="modal-detalles">
+                <h2 id="modal-titulo">Título del Proyecto</h2>
+                <p class="modal-autor">Por: <span id="modal-creador">Nombre del Estudiante</span></p>
+                <p class="modal-descripcion" id="modal-desc">Descripción completa del proyecto...</p>
+                <div class="proyecto-tags" id="modal-tags-contenedor">
+                    <!-- Se heredan dinámicamente de la tarjeta -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. LÓGICA EN JAVASCRIPT -->
+    <script>
+        // --- FILTROS DE CATEGORÍAS ---
+        const botonesFiltro = document.querySelectorAll('.btn-filtro');
+        const tarjetas = document.querySelectorAll('.tarjeta-proyecto');
+
+        botonesFiltro.forEach(boton => {
+            boton.addEventListener('click', () => {
+                // Cambiar clase activa entre botones
+                botonesFiltro.forEach(b => b.classList.remove('activo'));
+                boton.classList.add('activo');
+
+                const categoriaSeleccionada = boton.getAttribute('data-categoria');
+
+                // Filtrado con animación suave
+                tarjetas.forEach(tarjeta => {
+                    const categoriaTarjeta = tarjeta.getAttribute('data-categoria');
+                    
+                    if (categoriaSeleccionada === 'todos' || categoriaTarjeta === categoriaSeleccionada) {
+                        tarjeta.style.display = 'flex';
+                        setTimeout(() => { tarjeta.style.opacity = '1'; tarjeta.style.transform = 'scale(1)'; }, 50);
+                    } else {
+                        tarjeta.style.opacity = '0';
+                        tarjeta.style.transform = 'scale(0.95)';
+                        setTimeout(() => { tarjeta.style.display = 'none'; }, 300);
+                    }
+                });
+            });
+        });
+
+        // --- SISTEMA DEL MODAL INTERACTIVO ---
+        const modal = document.getElementById('modal-proyecto');
+
+        function abrirModal(titulo, autor, descripcion, imgUrl) {
+            document.getElementById('modal-titulo').innerText = titulo;
+            document.getElementById('modal-creador').innerText = autor;
+            document.getElementById('modal-desc').innerText = descripcion;
+            document.getElementById('modal-img-src').src = imgUrl;
+
+            // Abrir el modal añadiendo la clase
+            modal.classList.add('abierto');
+            document.body.style.overflow = 'hidden'; // Bloquea scroll del fondo
+        }
+
+        function cerrarModal() {
+            modal.classList.remove('abierto');
+            document.body.style.overflow = 'auto'; // Devuelve el scroll
+        }
+
+        // Cerrar si hacen clic fuera del cuadro del contenido
+        function cerrarModalExterno(event) {
+            if (event.target === modal) {
+                cerrarModal();
+            }
+        }
+    </script>
+
+    <script src="galeria.js"></script>
+</body>
+</html>
