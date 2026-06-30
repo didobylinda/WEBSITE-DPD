@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const headerContainer = document.querySelector(".header-container");
+    const navLinks = document.querySelectorAll(".main-nav a");
+
+    if (menuToggle && headerContainer) {
+        // Al dar clic en la hamburguesa, alternamos el estado abierto/cerrado
+        menuToggle.addEventListener("click", () => {
+            headerContainer.classList.toggle("nav-abierto");
+        });
+
+        // Al dar clic en cualquier enlace del menú, se cierra solo automáticamente
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                headerContainer.classList.remove("nav-abierto");
+            });
+        });
+    }
+});
+
 
 // ANIMACIONES DEL HERO
 

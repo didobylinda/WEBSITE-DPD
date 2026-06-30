@@ -258,7 +258,6 @@ body {
     white-space: normal;       
 }
 
-/* Stack Tecnológico (Tags) */
 .proyecto-tags {
     display: flex;
     flex-wrap: wrap;
@@ -398,6 +397,19 @@ body {
 
 .flecha-carrusel.prev { left: 15px; }
 .flecha-carrusel.next { right: 15px; }
+
+.proyecto-imagen {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-proyecto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 /* --- RESPONSIVIDAD --- */
 @media (max-width: 768px) {
